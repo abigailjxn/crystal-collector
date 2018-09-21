@@ -25,28 +25,78 @@ $(document).ready(function () {
     $("#crystala").click(function () {
         console.log(crystalA);
         userSum = userSum + crystalA;
-        // console.log(userSum);
         $(".usersum").text(userSum);
+        if (userSum > targetNumber) {
+            $(".usermessage").text("You went over! Try again!");
+            console.log("lose");
+            totalLosses = totalLosses + 1;
+            $("#totallosses").text(totalLosses);
+        }
+        else if (userSum === targetNumber) {
+            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+            console.log("win");
+            totalWins = totalWins + 1;
+            $("#totalwins").text(totalWins);
+        }
     });
     $("#crystalb").click(function () {
         console.log(crystalB);
         userSum = userSum + crystalB;
-        // console.log(userSum);
         $(".usersum").text(userSum);
+        if (userSum > targetNumber) {
+            $(".usermessage").text("You went over! Try again!");
+            console.log("lose");
+            totalLosses = totalLosses + 1;
+            $("#totallosses").text(totalLosses);
+        }
+        else if (userSum === targetNumber) {
+            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+            console.log("win");
+            totalWins = totalWins + 1;
+            $("#totalwins").text(totalWins);
+        }
     });
     $("#crystalc").click(function () {
         console.log(crystalC);
         userSum = userSum + crystalC;
-        // console.log(userSum);
         $(".usersum").text(userSum);
+        if (userSum > targetNumber) {
+            $(".usermessage").text("You went over! Try again!");
+            console.log("lose");
+            totalLosses = totalLosses + 1;
+            $("#totallosses").text(totalLosses);
+        }
+        else if (userSum === targetNumber) {
+            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+            console.log("win");
+            totalWins = totalWins + 1;
+            $("#totalwins").text(totalWins);
+        }
     });
     $("#crystald").click(function () {
         console.log(crystalD);
         userSum = userSum + crystalD;
         $(".usersum").text(userSum);
+        if (userSum > targetNumber) {
+            $(".usermessage").text("You went over! Try again!");
+            console.log("lose");
+            totalLosses = totalLosses + 1;
+            $("#totallosses").text(totalLosses);
+        }
+        else if (userSum === targetNumber) {
+            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+            console.log("win");
+            totalWins = totalWins + 1;
+            $("#totalwins").text(totalWins);
+        }
     });
 
-    
+    //   if (userSum > targetNumber) {
+    //       $(".usermessage").text("You went over! Try again!");
+    //   }
+    //   else if (userSum = targetNumber) {
+    //       $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+    //   }
 
     // generate 4 different scores and attach value to crystal
     // make each crystal hold random number (1-12)
