@@ -1,3 +1,7 @@
+$(document).ready(function(){
+
+
+
 // declare variables
 var userSum = 0;
 var targetNumber = 0;
@@ -11,8 +15,8 @@ var winMessage = "";
 var loseMessage = "";
 
 // dispaly random number ()
-$(#)
-targetNumber = Math.floor(Math.random() * (max - min)) + min;
+targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+console.log(targetNumber);
 // on click of crystal, update user score
     // make crystal clickable
 // generate 4 different scores and attach value to crystal
@@ -28,3 +32,4 @@ targetNumber = Math.floor(Math.random() * (max - min)) + min;
 // reset on win or loss
 // reset state: new random number, random crystals, user score = 0
 
+})
