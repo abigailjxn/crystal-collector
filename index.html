@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Megrim" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <title>Crystal Counter Game</title>
 </head>
+
 <body>
     <header>
         <h1>Crystal Collector</h1>
@@ -17,11 +20,14 @@
     <div class="container">
         <div class="rulebox">
             <h2>Rules</h2>
-            <p>Welcome! You will be given a random number at the start of the game.</p>
-            <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total.</p>
-            <p>You win the game by matching your total to the magic number displayed. But don't get trigger-happy! Go over the magic number, and you lose!</p>
-            <p>Each of the crystals have a hidden number that you won't know until you click on it.</p>
-            <p>Finally, the game resets at a win or loss, and the magic number, as well as the crystals, will change! Good luck!</p>
+            <p>Welcome! You will be given a random number at the start of the game. There are four crystals below. By clicking
+                on a crystal, you will add a specific amount of points to your total. You win the game by matching your total
+                to the magic number displayed. But don't get trigger-happy! Go over the magic number, and you lose! Each
+                of the crystals have a hidden number that you won't know until you click on it.</p>
+            <br>
+            <p>Finally, the game resets at a win or loss, and the magic number, as well as the crystals, will change! Good
+                luck!
+            </p>
         </div>
         <h3 id="targetnumber"></h3>
         <div class="crystalcontainer">
@@ -30,16 +36,22 @@
             <img src="" alt="crystal" id="crystalc" class="crystals">
             <img src="" alt="crystal" id="crystald" class="crystals">
         </div>
-        <div class="userSum"></div>
-        <div class="userMessage"></div>
-        <div class="totals">
-            <div id="totalwins"></div>
-            <div id="totallosses"></div>
+        <div class="userfeedback">
+            <div class="usersum"></div>
+            <div class="usermessage"></div>
+            <div class="totals">
+                Total Wins:
+                <div id="totalwins"></div>
+                Total Losses:
+                <div id="totallosses"></div>
+            </div>
         </div>
+
     </div>
-    
+
 
     <script type="text/javascript" src="assets/javascript/game.js">
-        </script>
+    </script>
 </body>
+
 </html>
