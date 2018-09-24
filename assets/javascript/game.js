@@ -1,29 +1,15 @@
-// var crystalSrcList = [
-    
-// ]
+$(document).ready(function () {
 
-function getRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
 
-function genCrystalValues() {
-    var arr = [];
-    for (var i =0; 0 < 4; i++) {
-        var value = getRandomNumber(1, 12);
-        arr.push(value);
-    }
-    return arr
-}
 
     // declare variables
     var userSum = 0;
     var userSumDisplay = 0;
     var targetNumber = 0;
-
-    // var crystalA = 0;
-    // var crystalB = 0;
-    // var crystalC = 0;
-    // var crystalD = 0;
+    var crystalA = Math.floor(Math.random() * (12 - 1)) + 1;
+    var crystalB = Math.floor(Math.random() * (12 - 1)) + 1;
+    var crystalC = Math.floor(Math.random() * (12 - 1)) + 1;
+    var crystalD = Math.floor(Math.random() * (12 - 1)) + 1;
     var totalWins = 0;
     var totalLosses = 0;
     var winMessage = "";
@@ -36,10 +22,15 @@ function genCrystalValues() {
     // on click of crystal, update user score
     // make crystal clickable
 
-    $(document).ready(function () {
+    $(".crystals").attr("value", function (index, attr) {
+        var randomNumber = Math.floor(Math.random() * (12 - 1)) + 1;
+        return randomNumber;
+        
+    })
 
-    $("#crystala").click(function () {
+    $(".crystals").click(function () {
         console.log(crystalA);
+        var elem = $(this);
         userSum = userSum + crystalA;
         $(".usersum").text(userSum);
         if (userSum > targetNumber) {
@@ -55,57 +46,57 @@ function genCrystalValues() {
             $("#totalwins").text(totalWins);
         }
     });
-    $("#crystalb").click(function () {
-        console.log(crystalB);
-        userSum = userSum + crystalB;
-        $(".usersum").text(userSum);
-        if (userSum > targetNumber) {
-            $(".usermessage").text("You went over! Try again!");
-            console.log("lose");
-            totalLosses = totalLosses + 1;
-            $("#totallosses").text(totalLosses);
-        }
-        else if (userSum === targetNumber) {
-            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
-            console.log("win");
-            totalWins = totalWins + 1;
-            $("#totalwins").text(totalWins);
-        }
-    });
-    $("#crystalc").click(function () {
-        console.log(crystalC);
-        userSum = userSum + crystalC;
-        $(".usersum").text(userSum);
-        if (userSum > targetNumber) {
-            $(".usermessage").text("You went over! Try again!");
-            console.log("lose");
-            totalLosses = totalLosses + 1;
-            $("#totallosses").text(totalLosses);
-        }
-        else if (userSum === targetNumber) {
-            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
-            console.log("win");
-            totalWins = totalWins + 1;
-            $("#totalwins").text(totalWins);
-        }
-    });
-    $("#crystald").click(function () {
-        console.log(crystalD);
-        userSum = userSum + crystalD;
-        $(".usersum").text(userSum);
-        if (userSum > targetNumber) {
-            $(".usermessage").text("You went over! Try again!");
-            console.log("lose");
-            totalLosses = totalLosses + 1;
-            $("#totallosses").text(totalLosses);
-        }
-        else if (userSum === targetNumber) {
-            $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
-            console.log("win");
-            totalWins = totalWins + 1;
-            $("#totalwins").text(totalWins);
-        }
-    });
+    // $("#crystalb").click(function () {
+    //     console.log(crystalB);
+    //     userSum = userSum + crystalB;
+    //     $(".usersum").text(userSum);
+    //     if (userSum > targetNumber) {
+    //         $(".usermessage").text("You went over! Try again!");
+    //         console.log("lose");
+    //         totalLosses = totalLosses + 1;
+    //         $("#totallosses").text(totalLosses);
+    //     }
+    //     else if (userSum === targetNumber) {
+    //         $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+    //         console.log("win");
+    //         totalWins = totalWins + 1;
+    //         $("#totalwins").text(totalWins);
+    //     }
+    // });
+    // $("#crystalc").click(function () {
+    //     console.log(crystalC);
+    //     userSum = userSum + crystalC;
+    //     $(".usersum").text(userSum);
+    //     if (userSum > targetNumber) {
+    //         $(".usermessage").text("You went over! Try again!");
+    //         console.log("lose");
+    //         totalLosses = totalLosses + 1;
+    //         $("#totallosses").text(totalLosses);
+    //     }
+    //     else if (userSum === targetNumber) {
+    //         $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+    //         console.log("win");
+    //         totalWins = totalWins + 1;
+    //         $("#totalwins").text(totalWins);
+    //     }
+    // });
+    // $("#crystald").click(function () {
+    //     console.log(crystalD);
+    //     userSum = userSum + crystalD;
+    //     $(".usersum").text(userSum);
+    //     if (userSum > targetNumber) {
+    //         $(".usermessage").text("You went over! Try again!");
+    //         console.log("lose");
+    //         totalLosses = totalLosses + 1;
+    //         $("#totallosses").text(totalLosses);
+    //     }
+    //     else if (userSum === targetNumber) {
+    //         $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
+    //         console.log("win");
+    //         totalWins = totalWins + 1;
+    //         $("#totalwins").text(totalWins);
+    //     }
+    // });
 
     //   if (userSum > targetNumber) {
     //       $(".usermessage").text("You went over! Try again!");
