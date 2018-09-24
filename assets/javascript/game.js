@@ -1,15 +1,29 @@
-$(document).ready(function () {
+// var crystalSrcList = [
+    
+// ]
 
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 
+function genCrystalValues() {
+    var arr = [];
+    for (var i =0; 0 < 4; i++) {
+        var value = getRandomNumber(1, 12);
+        arr.push(value);
+    }
+    return arr
+}
 
     // declare variables
     var userSum = 0;
     var userSumDisplay = 0;
     var targetNumber = 0;
-    var crystalA = Math.floor(Math.random() * (12 - 1)) + 1;
-    var crystalB = Math.floor(Math.random() * (12 - 1)) + 1;
-    var crystalC = Math.floor(Math.random() * (12 - 1)) + 1;
-    var crystalD = Math.floor(Math.random() * (12 - 1)) + 1;
+
+    // var crystalA = 0;
+    // var crystalB = 0;
+    // var crystalC = 0;
+    // var crystalD = 0;
     var totalWins = 0;
     var totalLosses = 0;
     var winMessage = "";
@@ -21,6 +35,8 @@ $(document).ready(function () {
     $("#targetnumber").text(targetNumber);
     // on click of crystal, update user score
     // make crystal clickable
+
+    $(document).ready(function () {
 
     $("#crystala").click(function () {
         console.log(crystalA);
