@@ -25,10 +25,6 @@ $(document).ready(function () {
 
     genCrystalValue();
 
-    function userMessage () {
-
-    }
-
     function reset(totalWins, totalLosses) {
         userSum = 0;
         genTargetNumber();
@@ -38,8 +34,6 @@ $(document).ready(function () {
         $(".usermessage").text("");
 
     }
-
-
     $(".crystals").click(function (event) {
         var randomValue = $(this).attr("value");
         var crystalValue = parseInt(randomValue);
@@ -66,11 +60,5 @@ $(document).ready(function () {
             });
         }
     });
-
-
-    // add to win or loss counter
-
-    // reset on win or loss
-    // reset state: new random number, random crystals, user score = 0
 
 })

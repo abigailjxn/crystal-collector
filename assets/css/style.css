@@ -65,9 +65,17 @@ h3 {
     margin: auto;
     padding: 30px;
     border: 3px solid black;
-    text-align: justify;
+    text-align: center;
     text-justify: auto;
     font-size: 30px;
+}
+
+.usersum {
+    padding: 10px;
+}
+
+.usermessage {
+    padding: 10px;
 }
 
 .totals {
