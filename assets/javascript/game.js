@@ -34,21 +34,20 @@ $(document).ready(function () {
         
     })
 
-    // function reset (totalWins, totalLosses) {
-    //     userSum = 0;
+    function reset (totalWins, totalLosses) {
+        userSum = 0;
 
 
-    // }
+    }
 
    
-
-    $(".crystals").click(function (userSum) {
+    var userSum = 0;
+    $(".crystals").click(function (event) {
         var randomValue = $(this).attr("value");
-          parseInt(randomValue);
-          var userSum = 0;
+       
+        var crystalValue = parseInt(randomValue);
           parseInt(userSum);
-          
-        userSum = userSum + 2;
+        userSum += crystalValue;
         console.log(userSum);
 
         $(".usersum").text(userSum);
