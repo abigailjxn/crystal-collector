@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
     // declare variables
-    var userSum = 0;
+    // var userSum = "0";
     var userSumDisplay = 0;
     var targetNumber = 0;
     var crystalA = Math.floor(Math.random() * (12 - 1)) + 1;
@@ -16,6 +16,11 @@ $(document).ready(function () {
     var loseMessage = "";
 
     // dispaly random number ()
+    // function genTargetNumber () {
+    //     targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
+    // console.log(targetNumber);
+    // $("#targetnumber").text(targetNumber);
+    // }
     targetNumber = Math.floor(Math.random() * (120 - 19)) + 19;
     console.log(targetNumber);
     $("#targetnumber").text(targetNumber);
@@ -24,25 +29,39 @@ $(document).ready(function () {
 
     $(".crystals").attr("value", function (index, attr) {
         var randomNumber = Math.floor(Math.random() * (12 - 1)) + 1;
+        console.log(this, randomNumber);
         return randomNumber;
         
     })
 
-    $(".crystals").click(function () {
-        console.log(crystalA);
-        var elem = $(this);
-        userSum = userSum + crystalA;
+    // function reset (totalWins, totalLosses) {
+    //     userSum = 0;
+
+
+    // }
+
+   
+
+    $(".crystals").click(function (userSum) {
+        var randomValue = $(this).attr("value");
+          parseInt(randomValue);
+          var userSum = 0;
+          parseInt(userSum);
+          
+        userSum = userSum + 2;
+        console.log(userSum);
+
         $(".usersum").text(userSum);
         if (userSum > targetNumber) {
             $(".usermessage").text("You went over! Try again!");
             console.log("lose");
-            totalLosses = totalLosses + 1;
+            totalLosses++;
             $("#totallosses").text(totalLosses);
         }
         else if (userSum === targetNumber) {
             $(".usermessage").text("Congrats! You win! *sparkle sparkle* Let's do it again!");
             console.log("win");
-            totalWins = totalWins + 1;
+            totalWins++;
             $("#totalwins").text(totalWins);
         }
     });
